@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CBB331CB-52D3-4A9C-A3E3-64795E8AC46D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KutuphaneOtomasyonu</RootNamespace>
+    <AssemblyName>KutuphaneOtomasyonu</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44349</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KategorıController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Css\animate.css" />
+    <Content Include="Content\Css\blue.css" />
+    <Content Include="Content\Css\bootstrap.min.css" />
+    <Content Include="Content\Css\css-chart.css" />
+    <Content Include="Content\Css\jquery-jvectormap-2.0.2.css" />
+    <Content Include="Content\Css\sidebar-nav.min.css" />
+    <Content Include="Content\Css\style.css" />
+    <Content Include="Content\less\icons\font-awesome\.gitignore" />
+    <Content Include="Content\less\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Content\less\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Content\less\icons\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="Content\less\icons\linea-icons\linea.css" />
+    <Content Include="Content\less\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Content\less\icons\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Content\less\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="Content\less\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="Content\less\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="Content\less\icons\themify-icons\themify-icons.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons-core.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons-variables.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons-wind.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons-wind.min.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons.css" />
+    <Content Include="Content\less\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Content\less\icons\weather-icons\font\weathericons-regular-webfont.svg" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-beaufort.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-day.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-direction.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-misc.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-moon.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-neutral.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-night.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-time.css" />
+    <Content Include="Content\less\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="Content\less\spinners.css" />
+    <Content Include="Content\ımg\eliteadmin-logo.png" />
+    <Content Include="Content\ımg\eliteadmin-text.png" />
+    <Content Include="Content\ımg\indir.png" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\custom.js" />
+    <Content Include="Scripts\dashboard2.js" />
+    <Content Include="Scripts\easy-pie-chart.init.js" />
+    <Content Include="Scripts\jquery-jvectormap-2.0.2.min.js" />
+    <Content Include="Scripts\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\jquery.easypiechart.min.js" />
+    <Content Include="Scripts\jquery.flot.js" />
+    <Content Include="Scripts\jquery.flot.tooltip.min.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.slimscroll.js" />
+    <Content Include="Scripts\jquery.sparkline.min.js" />
+    <Content Include="Scripts\jQuery.style.switcher.js" />
+    <Content Include="Scripts\sidebar-nav.min.js" />
+    <Content Include="Scripts\waves.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\less\colors\blue-dark.less" />
+    <Content Include="Content\less\colors\blue.less" />
+    <Content Include="Content\less\colors\default-dark.less" />
+    <Content Include="Content\less\colors\default.less" />
+    <Content Include="Content\less\colors\gray-dark.less" />
+    <Content Include="Content\less\colors\gray.less" />
+    <Content Include="Content\less\colors\green-dark.less" />
+    <Content Include="Content\less\colors\green.less" />
+    <Content Include="Content\less\colors\megna-dark.less" />
+    <Content Include="Content\less\colors\megna.less" />
+    <Content Include="Content\less\colors\purple-dark.less" />
+    <Content Include="Content\less\colors\purple.less" />
+    <Content Include="Content\less\eliteadmin.less" />
+    <Content Include="Content\less\icons\font-awesome\.bower.json" />
+    <Content Include="Content\less\icons\font-awesome\.npmignore" />
+    <Content Include="Content\less\icons\font-awesome\bower.json" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont-old.ttf" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Content\less\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Content\less\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Content\less\icons\font-awesome\less\animated.less" />
+    <Content Include="Content\less\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Content\less\icons\font-awesome\less\core.less" />
+    <Content Include="Content\less\icons\font-awesome\less\extras.less" />
+    <Content Include="Content\less\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="Content\less\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="Content\less\icons\font-awesome\less\icons.less" />
+    <Content Include="Content\less\icons\font-awesome\less\larger.less" />
+    <Content Include="Content\less\icons\font-awesome\less\list.less" />
+    <Content Include="Content\less\icons\font-awesome\less\mixins.less" />
+    <Content Include="Content\less\icons\font-awesome\less\path.less" />
+    <Content Include="Content\less\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Content\less\icons\font-awesome\less\spinning.less" />
+    <Content Include="Content\less\icons\font-awesome\less\stacked.less" />
+    <Content Include="Content\less\icons\font-awesome\less\variables.less" />
+    <Content Include="Content\less\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_extras.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_path.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_spinning.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Content\less\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="Content\less\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="Content\less\icons\linea-icons\linea.less" />
+    <Content Include="Content\less\icons\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Content\less\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Content\less\icons\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Content\less\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Content\less\icons\simple-line-icons\less\simple-line-icons.less" />
+    <Content Include="Content\less\icons\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="Content\less\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="Content\less\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Content\less\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Content\less\icons\themify-icons\themify-icons.less" />
+    <Content Include="Content\less\icons\weather-icons\font\weathericons-regular-webfont.eot" />
+    <Content Include="Content\less\icons\weather-icons\font\weathericons-regular-webfont.ttf" />
+    <Content Include="Content\less\icons\weather-icons\font\weathericons-regular-webfont.woff" />
+    <Content Include="Content\less\icons\weather-icons\font\weathericons-regular-webfont.woff2" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-beaufort.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-day.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-direction.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-misc.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-moon-aliases.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-moon.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-neutral.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-night.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-time.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-wind-aliases.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-wind-degrees.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-classes\classes-wind.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-beaufort.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-day.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-direction.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-misc.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-moon.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-neutral.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-night.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-time.less" />
+    <Content Include="Content\less\icons\weather-icons\less\icon-variables\variables-wind-names.less" />
+    <Content Include="Content\less\icons\weather-icons\less\mappings\wi-forecast-io.less" />
+    <Content Include="Content\less\icons\weather-icons\less\mappings\wi-owm.less" />
+    <Content Include="Content\less\icons\weather-icons\less\mappings\wi-wmo4680.less" />
+    <Content Include="Content\less\icons\weather-icons\less\mappings\wi-yahoo.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons-classes.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons-core.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons-variables.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons-wind.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons-wind.min.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons.less" />
+    <Content Include="Content\less\icons\weather-icons\less\weather-icons.min.less" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-beaufort.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-day.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-direction.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-misc.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-moon.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-neutral.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-night.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-time.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-classes\classes-wind.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-beaufort.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-day.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-direction.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-misc.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-moon.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-neutral.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-night.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-time.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\icon-variables\variables-wind-names.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\mappings\wi-forecast-io.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\mappings\wi-owm.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\mappings\wi-wmo4680.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\mappings\wi-yahoo.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons-classes.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons-core.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons-variables.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons-wind.min.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons-wind.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons.min.scss" />
+    <Content Include="Content\less\icons\weather-icons\sass\weather-icons.scss" />
+    <Content Include="Content\less\pages.less" />
+    <Content Include="Content\less\responsive.less" />
+    <Content Include="Content\less\sidebar-nav.less" />
+    <Content Include="Content\less\style.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\widgets.less" />
+    <None Include="packages.config" />
+    <Content Include="Views\Kategorı\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KutuphaneProgramı.Data.Model\KutuphaneProgramı.Data.Model.csproj">
+      <Project>{F585BD11-9D62-4674-ACD7-FB0C6D2E341A}</Project>
+      <Name>KutuphaneProgramı.Data.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KutuphaneProgramı.Data\KutuphaneProgramı.Data.csproj">
+      <Project>{BEC76649-9A97-4BC7-BB00-9992768B365B}</Project>
+      <Name>KutuphaneProgramı.Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>61716</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44349/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Bu proje bu bilgisayarda olmayan NuGet paketlerine başvuru yapıyor. Bunları indirmek için NuGet Paket Geri Yükleme'yi kullanın. Daha fazla bilgi için, bkz. http://go.microsoft.com/fwlink/?LinkID=322105. Eksik dosya: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
